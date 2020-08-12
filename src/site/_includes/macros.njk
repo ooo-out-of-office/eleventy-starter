@@ -1,0 +1,15 @@
+{% macro title(text) %}
+  {% if text %}
+    {{ text }} | {{site.title}
+  {% else %}
+    {{site.title}
+  {% endif %}
+{% endmacro %}
+
+{% macro description(text) %}
+  {% if text | striptags | length > 0 %}
+   {{ text | striptags | truncate(196) }}
+  {% else %}
+    {{ site.description }}
+  {% endif %}
+{% endmacro %}

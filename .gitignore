@@ -1,0 +1,4 @@
+node_modules
+_site/*
+!_site/admin/
+!_site/_redirects
