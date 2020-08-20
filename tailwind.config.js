@@ -1,5 +1,8 @@
 module.exports = {
   purge: ["./src/site/**/*.html", "./src/site/**/*.njk", "./src/site/**/*.md"],
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
   theme: {
     screens: {
       md: "768px",

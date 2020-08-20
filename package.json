@@ -6,7 +6,7 @@
   "scripts": {
     "cm": "git-cz",
     "debug": "DEBUG=Eleventy* npm run dev",
-    "build": "ELEVENTY_ENV=prod npm-run-all --sequential webpack:prod start:prod ",
+    "build": "NODE_ENV=production ELEVENTY_ENV=prod npm-run-all --sequential webpack:prod start:prod ",
     "dev": "ELEVENTY_ENV=dev npm-run-all --parallel webpack:dev start:dev",
     "start:dev": "eleventy --serve",
     "start:prod": "eleventy",
