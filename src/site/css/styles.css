@@ -1,4 +1,6 @@
 @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @font-face {
   font-family: "Inter";
@@ -15,6 +17,3 @@
   font-display: swap;
   src: url("/fonts/Inter-SemiBoldItalic.woff2") format("woff2");
 }
-
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
