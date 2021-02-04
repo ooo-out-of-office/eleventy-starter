@@ -12,11 +12,7 @@ const cacheList = [staticCacheName, pagesCacheName, imagesCacheName];
 function updateStaticCache() {
   return caches.open(staticCacheName).then((staticCache) => {
     // These items must be cached for the Service Worker to complete installation
-    return staticCache.addAll([
-      "/js/lib/lazysizes.min.js",
-      "/js/cart.js",
-      "/css/styles.css",
-    ]);
+    return staticCache.addAll(["/css/styles.css"]);
   });
 }
 
