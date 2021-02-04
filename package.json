@@ -6,12 +6,8 @@
   "scripts": {
     "cm": "git-cz",
     "debug": "DEBUG=Eleventy* npm run dev",
-    "build": "NODE_ENV=production ELEVENTY_ENV=prod npm-run-all --sequential webpack:prod start:prod ",
-    "dev": "ELEVENTY_ENV=dev npm-run-all --parallel webpack:dev start:dev",
-    "start:dev": "eleventy --serve",
-    "start:prod": "eleventy",
-    "webpack:dev": "webpack --watch --config webpack.dev.js",
-    "webpack:prod": "webpack --config webpack.prod.js"
+    "build": "NODE_ENV=production ELEVENTY_ENV=prod snowpack build",
+    "dev": "ELEVENTY_ENV=dev snowpack dev"
   },
   "husky": {
     "hooks": {
@@ -22,26 +18,22 @@
     "@11ty/eleventy": "^0.11.0",
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
-    "autoprefixer": "^9.8.6",
+    "@snowpack/plugin-postcss": "^1.1.0",
+    "@snowpack/plugin-run-script": "^2.3.0",
+    "autoprefixer": "~9.8.6",
     "commitizen": "^4.1.2",
-    "css-loader": "^4.2.1",
     "cssnano": "^4.1.10",
     "cz-conventional-changelog": "3.2.0",
     "dotenv": "^8.2.0",
     "html-minifier": "^4.0.0",
     "husky": "^4.2.5",
-    "mini-css-extract-plugin": "^0.10.0",
     "npm-run-all": "^4.1.5",
-    "postcss": "^7.0.32",
+    "postcss": "^8.2.4",
     "postcss-cli": "^7.1.1",
-    "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
-    "tailwindcss": "^1.6.2",
-    "validate-commit-msg": "^2.14.0",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-manifest-plugin": "^2.2.0",
-    "webpack-merge": "^5.1.1"
+    "postcss-import": "^14.0.0",
+    "snowpack": "^3.0.11",
+    "tailwindcss": "^2.0.2",
+    "validate-commit-msg": "^2.14.0"
   },
   "config": {
     "commitizen": {

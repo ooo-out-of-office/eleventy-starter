@@ -16,10 +16,10 @@ module.exports = {
         mask: "rgba(255, 255, 255, .5)",
       },
       gray: {
-        "100": "#f5f5f5",
-        "200": "#eeeeee",
-        "300": "#e0e0e0",
-        "400": "#bdbdbd",
+        100: "#f5f5f5",
+        200: "#eeeeee",
+        300: "#e0e0e0",
+        400: "#bdbdbd",
       },
     },
     backgroundColor: (theme) => theme("colors"),
@@ -86,7 +86,7 @@ module.exports = {
     }),
     inset: (theme) => ({
       ...theme("spacing"),
-      "0": "0",
+      0: "0",
       auto: "auto",
     }),
     lineHeight: {
@@ -106,12 +106,12 @@ module.exports = {
       ...breakpoints(theme("screens")),
     }),
     minHeight: {
-      "0": "0",
+      0: "0",
       full: "100%",
       screen: "100vh",
     },
     minWidth: {
-      "0": "0",
+      0: "0",
       full: "100%",
     },
 
@@ -130,9 +130,9 @@ module.exports = {
       screen: "100vw",
     }),
     zIndex: {
-      "0": "0",
-      "10": "10",
-      "20": "20",
+      0: "0",
+      10: "10",
+      20: "20",
     },
     gap: (theme) => ({
       ...theme("spacing"),

@@ -11,20 +11,6 @@ module.exports = function (config) {
   // Layout aliases can make templates more portable
   config.addLayoutAlias("default", "layouts/base.njk");
 
-  // Add some utility filters
-  config.addNunjucksAsyncFilter(
-    "hashed",
-    require("./src/utils/filters/hashed.js")
-  );
-
-  // pass some assets right through
-  config.addPassthroughCopy("./src/site/service-worker.js");
-  config.addPassthroughCopy("./src/site/fonts");
-  config.addPassthroughCopy("./src/site/images");
-  config.addPassthroughCopy("./src/site/js");
-  config.addPassthroughCopy("./src/site/favicon.ico");
-  config.addPassthroughCopy("./src/site/browserconfig.xml");
-
   config.setBrowserSyncConfig({
     callbacks: {
       ready: function (err, bs) {
@@ -56,7 +42,7 @@ module.exports = function (config) {
 
   return {
     dir: {
-      input: "src/site",
+      input: "site",
       data: `_data`,
     },
     templateFormats: ["njk", "md", "11ty.js"],
