@@ -4,3 +4,4 @@ _site
 build/*
 !build/admin/
 !build/_redirects
+.DS_Store
