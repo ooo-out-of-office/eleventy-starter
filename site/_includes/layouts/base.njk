@@ -44,21 +44,5 @@
     <footer class="grid grid-cols-12 text-sm">
       {% include "footer.njk" %}
     </footer>
-
-  <script>
-  if (navigator.serviceWorker && !["dev"].includes("{{site.environment}}")) {
-    window.addEventListener("load", function() {
-      navigator.serviceWorker.register('/service-worker.js', {
-        scope: '/'
-      });
-
-      if (navigator.serviceWorker.controller) {
-        navigator.serviceWorker.controller.postMessage({
-          "command": "trimCaches"
-        });
-      }
-    });
-  }
-  </script>
   </body>
 </html>
