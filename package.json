@@ -6,7 +6,9 @@
   "scripts": {
     "cm": "git-cz",
     "debug": "DEBUG=Eleventy* npm run dev",
-    "build": "NODE_ENV=production ELEVENTY_ENV=prod snowpack build",
+    "build": "yarn build:eleventy && yarn build:snowpack",
+    "build:eleventy": "ELEVENTY_ENV=prod yarn eleventy",
+    "build:snowpack": "snowpack build",
     "dev": "ELEVENTY_ENV=dev snowpack dev"
   },
   "husky": {
@@ -32,7 +34,7 @@
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.0",
-    "snowpack": "^3.0.11",
+    "snowpack": "^3.8.8",
     "tailwindcss": "^2.0.2",
     "validate-commit-msg": "^2.14.0"
   },
